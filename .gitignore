@@ -6,3 +6,4 @@ windows/**/bin/
 windows/**/obj/
 windows/src/GravaTela/tools/ffmpeg.exe
 dist/
+.rpmbuild/
