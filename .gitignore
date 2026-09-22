@@ -1,0 +1,8 @@
+__pycache__/
+*.py[cod]
+.pytest_cache/
+build/
+windows/**/bin/
+windows/**/obj/
+windows/src/GravaTela/tools/ffmpeg.exe
+dist/

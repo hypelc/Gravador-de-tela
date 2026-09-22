@@ -1,0 +1,9 @@
+[Desktop Entry]
+Type=Application
+Name=Gravador de Tela
+Comment=Gravador local de tela para KDE Wayland
+Exec=gravadordetela
+Icon=io.github.jeanlc77.GravadorDeTela
+Terminal=false
+Categories=AudioVideo;Recorder;
+StartupNotify=true

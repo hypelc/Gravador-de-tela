@@ -1,0 +1,38 @@
+{
+  "id": "io.github.jeanlc77.GravadorDeTela",
+  "runtime": "org.gnome.Platform",
+  "runtime-version": "50",
+  "sdk": "org.gnome.Sdk",
+  "command": "gravadordetela",
+  "finish-args": [
+    "--socket=wayland",
+    "--socket=fallback-x11",
+    "--socket=pulseaudio",
+    "--share=ipc",
+    "--device=all",
+    "--filesystem=home",
+    "--talk-name=org.kde.StatusNotifierWatcher"
+  ],
+  "modules": [
+    {
+      "name": "gravadordetela",
+      "buildsystem": "simple",
+      "build-commands": [
+        "install -Dm755 bin/gravadordetela /app/bin/gravadordetela",
+        "install -d /app/share/gravadordetela/gravadordetela",
+        "install -m644 src/gravadordetela/*.py /app/share/gravadordetela/gravadordetela/",
+        "install -Dm644 packaging/io.github.jeanlc77.GravadorDeTela.desktop /app/share/applications/io.github.jeanlc77.GravadorDeTela.desktop",
+        "install -Dm644 packaging/io.github.jeanlc77.GravadorDeTela.svg /app/share/icons/hicolor/scalable/apps/io.github.jeanlc77.GravadorDeTela.svg",
+        "install -Dm644 packaging/io.github.jeanlc77.GravadorDeTela-recording.svg /app/share/icons/hicolor/scalable/apps/io.github.jeanlc77.GravadorDeTela-recording.svg",
+        "install -Dm644 packaging/io.github.jeanlc77.GravadorDeTela-paused.svg /app/share/icons/hicolor/scalable/apps/io.github.jeanlc77.GravadorDeTela-paused.svg",
+        "install -Dm644 LICENSE /app/share/licenses/gravadordetela/LICENSE"
+      ],
+      "sources": [
+        {
+          "type": "dir",
+          "path": ".."
+        }
+      ]
+    }
+  ]
+}
